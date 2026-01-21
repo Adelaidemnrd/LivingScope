@@ -1,16 +1,6 @@
 export default async function handler(req, res) {
-  res.status(200).json({ message: "Hello from Vercel API" });
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-
-  if (req.method === 'OPTIONS') {
-    return res.status(200).end();
-  }
-
   const data = req.body;
-  ...
-}
+
   const prompt = `
 You are a global life expectancy and lifestyle expert.
 Analyze the following anonymous responses.
