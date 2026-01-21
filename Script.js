@@ -3,11 +3,11 @@ document.getElementById("lifeForm").addEventListener("submit", async (e) => {
 
   const data = Object.fromEntries(new FormData(e.target).entries());
 
-  // Data anonymization
+  // Anonymisation totale
   const anonymized = data;
 
-  // Send to backend Vercel
-  const res = await fetch("https://TON-PROJET.vercel.app/api/analyze", {
+  // Envoi vers backend Vercel
+  const res = await fetch("https://adelaimnrd.vercel.app/api/analyze", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(anonymized)
@@ -15,12 +15,12 @@ document.getElementById("lifeForm").addEventListener("submit", async (e) => {
 
   const result = await res.json();
 
-  // Display analysis in new window
+  // Affichage analyse IA dans une nouvelle fenêtre
   const win = window.open("", "_blank");
-  win.document.write("<h1>Systemic Life Analysis</h1>");
+  win.document.write("<h1>LivingScope - Systemic Life Analysis</h1>");
   win.document.write(`<pre>${result.analysis}</pre>`);
 
-  // Chart
+  // Graphique des facteurs
   const factors = result.factors; 
   if(factors){
     const ctx = document.getElementById('factorChart').getContext('2d');
