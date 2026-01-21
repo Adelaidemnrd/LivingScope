@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LivingScope - Life Analysis Questionnaire</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 2rem; background: #F2F6FA; color: #2E3440; }
+    textarea { width: 100%; height: 80px; margin-bottom: 15px; padding: 10px; font-size: 14px; }
+    button { width: 100%; padding: 15px; background-color: #6B8EC1; color: white; border: none; cursor: pointer; font-size: 16px; }
+    canvas { margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <h1>LivingScope - Life Analysis Questionnaire</h1>
+  <form id="lifeForm">
+    <p>Answer the following 30 questions openly. Your answers are completely anonymous.</p>
+
+    <!-- 30 questions -->
+    <label>1. How would you describe your daily diet?</label><textarea name="q1" required></textarea>
+    <label>2. How many hours do you sleep on average?</label><textarea name="q2" required></textarea>
+    <label>3. How often do you exercise?</label><textarea name="q3" required></textarea>
+    <label>4. Describe your stress levels and coping strategies.</label><textarea name="q4" required></textarea>
+    <label>5. Do you smoke or consume alcohol? If so, how often?</label><textarea name="q5" required></textarea>
+    <label>6. Do you take any medication or supplements?</label><textarea name="q6" required></textarea>
+    <label>7. How would you describe your mental health?</label><textarea name="q7" required></textarea>
+    <label>8. Do you have any chronic illnesses or past diseases?</label><textarea name="q8" required></textarea>
+    <label>9. How much time do you spend outdoors or in nature?</label><textarea name="q9" required></textarea>
+    <label>10. How connected are you socially and emotionally?</label><textarea name="q10" required></textarea>
+    <label>11. Describe your family medical history.</label><textarea name="q11" required></textarea>
+    <label>12. Do you have any known genetic conditions?</label><textarea name="q12" required></textarea>
+    <label>13. How would you rate your cognitive activity / intellectual engagement?</label><textarea name="q13" required></textarea>
+    <label>14. Do you meditate or practice mindfulness?</label><textarea name="q14" required></textarea>
+    <label>15. How would you describe your work-life balance?</label><textarea name="q15" required></textarea>
+    <label>16. How often do you travel or change your environment?</label><textarea name="q16" required></textarea>
+    <label>17. Describe your hobbies or creative activities.</label><textarea name="q17" required></textarea>
+    <label>18. How would you describe your daily energy levels?</label><textarea name="q18" required></textarea>
+    <label>19. How do you usually handle illness or health issues?</label><textarea name="q19" required></textarea>
+    <label>20. How often do you go for medical check-ups?</label><textarea name="q20" required></textarea>
+    <label>21. Do you have pets or interact with animals?</label><textarea name="q21" required></textarea>
+    <label>22. How would you describe your living environment?</label><textarea name="q22" required></textarea>
+    <label>23. How satisfied are you with your lifestyle choices?</label><textarea name="q23" required></textarea>
+    <label>24. Do you have spiritual or philosophical practices?</label><textarea name="q24" required></textarea>
+    <label>25. How often do you laugh or feel joy?</label><textarea name="q25" required></textarea>
+    <label>26. Describe your mobility and physical strength.</label><textarea name="q26" required></textarea>
+    <label>27. Do you experience chronic pain or fatigue?</label><textarea name="q27" required></textarea>
+    <label>28. How would you rate your emotional resilience?</label><textarea name="q28" required></textarea>
+    <label>29. How would you describe your intelligence and reasoning habits?</label><textarea name="q29" required></textarea>
+    <label>30. Anything else that impacts your health or longevity?</label><textarea name="q30" required></textarea>
+
+    <button type="submit">Analyze My Life</button>
+  </form>
+
+  <canvas id="factorChart" width="400" height="200"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
