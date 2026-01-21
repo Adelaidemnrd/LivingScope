@@ -8,10 +8,10 @@ document.getElementById("lifeForm").addEventListener("submit", async (e) => {
 
   // Envoi vers backend Vercel
   const res = await fetch("https://living-scope-theory.vercel.app/api/analyze", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(anonymized)
-  });
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(anonymized)
+});
 
   const result = await res.json();
 
